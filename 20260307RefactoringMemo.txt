@@ -1,0 +1,15 @@
+Scene
+├── ScannedRoom (Root object of the mesh you want to move)
+│    └── Attached: AlignableTarget.cs + EventHub
+│
+├── [InputProviders] (Empty GameObject)
+│    ├── Attached: KeyboardDebugTranslator.cs + EventHub
+│    ├── Attached: VRControllerTranslator.cs + EventHub
+│    └── Attached: PhotonAlignmentReceiver.cs + EventHub + TargetMesh
+│
+├── [Systems] (Empty GameObject)
+│    ├── Attached: CalibrationPersistenceSystem.cs + EventHub + TargetMesh
+│    └── Attached: PhotonAlignmentSender.cs + EventHub + TargetMesh
+│
+└── [AppManager] (Empty GameObject)
+└── Attached: LocalWorkerAppManager.cs + VRCamera (Automatically resolved if left blank)
